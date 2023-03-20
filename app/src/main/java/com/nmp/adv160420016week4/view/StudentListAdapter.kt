@@ -26,7 +26,7 @@ class StudentListAdapter(val studentList: ArrayList<Student>) : RecyclerView.Ada
             txtStudentName.text = student.name
 
             btnDetail.setOnClickListener {
-                val action = StudentListFragmentDirections.actionStudentDetail()
+                val action = StudentListFragmentDirections.actionStudentDetail(student.id!!)
                 Navigation.findNavController(it).navigate(action)
             }
         }
